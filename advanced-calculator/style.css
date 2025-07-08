@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 550px;
+}
+
+.display {
+    grid-column: 1 / -1; /* Span all 5 columns */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 10px;
+}
+
+.history-display {
+    min-height: 30px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-display {
+    min-height: 50px;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator, [data-action="equals"] {
+    background-color: #f39c12; /* Orange */
+}
+
+.operator:hover, [data-action="equals"]:hover {
+    background-color: #e67e22;
+}
+
+.memory, [data-action="clear-all"], [data-action="backspace"] {
+    background-color: #3498db; /* Blue */
+}
+
+.memory:hover, [data-action="clear-all"]:hover, [data-action="backspace"]:hover {
+    background-color: #2980b9;
+}

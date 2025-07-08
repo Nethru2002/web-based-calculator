@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-grid">
+        <!-- Display Screen -->
+        <div class="display">
+            <div class="history-display"></div>
+            <div class="main-display">0</div>
+        </div>
+
+        <!-- Calculator Buttons -->
+        <button data-value="sin">sin</button>
+        <button data-value="cos">cos</button>
+        <button data-value="tan">tan</button>
+        <button data-action="clear-all" class="span-two">AC</button>
+
+        <button data-value="ln">ln</button>
+        <button data-value="log">log</button>
+        <button data-value="^">x<sup>y</sup></button>
+        <button data-action="backspace">DEL</button>
+        <button data-action="equals" class="operator">=</button>
+
+        <button data-value="sqrt">√</button>
+        <button data-value="!">n!</button>
+        <button data-value="(">(</button>
+        <button data-value=")">)</button>
+        <button data-value="/" class="operator">÷</button>
+
+        <button data-value="7" class="number">7</button>
+        <button data-value="8" class="number">8</button>
+        <button data-value="9" class="number">9</button>
+        <button data-value="pi">π</button>
+        <button data-value="*" class="operator">×</button>
+
+        <button data-value="4" class="number">4</button>
+        <button data-value="5" class="number">5</button>
+        <button data-value="6" class="number">6</button>
+        <button data-value="e">e</button>
+        <button data-value="-" class="operator">-</button>
+
+        <button data-value="1" class="number">1</button>
+        <button data-value="2" class="number">2</button>
+        <button data-value="3" class="number">3</button>
+        <button data-value="M+" class="memory">M+</button>
+        <button data-value="+" class="operator">+</button>
+        
+        <button data-value="0" class="number span-two">0</button>
+        <button data-value="." class="number">.</button>
+        <button data-value="MR" class="memory">MR</button>
+        <button data-action="toggle-sign">+/-</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
